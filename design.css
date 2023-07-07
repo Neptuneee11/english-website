@@ -1,0 +1,64 @@
+body{
+    background-color: antiquewhite;
+}
+
+div.playerPanel{
+    background-color: black;
+    width: auto;
+    margin-left: 20%;
+    margin-right: 20%;
+    min-height: 600px;
+    height: 80rem;
+
+    position: relative;
+}
+
+
+div.gameView{
+    width: 500px;
+    height: 500px;
+    background-color: beige;
+
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%,0);
+
+    background-image: url("theMap.png") ;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 300%;
+
+    transition: background-position 0.5s;
+}
+
+div.invis{
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    /*background-color: blue;*/
+
+}
+
+div.interactable{
+    border-radius: 50%;
+    background-color: blue;
+
+}
+
+div#minigame{
+    position:absolute;
+    top: 20%;
+    right: 10%;
+}
+
+div.random_1{
+    background-color: chocolate;
+    padding: 50px;
+}
+
+div.random_2{
+    background-color: rgb(96, 210, 30);
+    padding: 25px;
+}
