@@ -1,9 +1,9 @@
 var row1 = 1;
 var col1 = 1;
 $(document).ready(function(){
-    //generate a random ID for each entry
-
     console.log("ready");
+
+    //Empty the modal everytime it's closed
     $("#minigameModal").on('hide.bs.modal', function(){
         $("#addJunkHere").empty()
     });
@@ -11,8 +11,8 @@ $(document).ready(function(){
 
 function doFirst(){
     let inv=document.getElementsByClassName("invis");
-    //set them all to display: none except for the center
 
+    //set them all to display: none except for the center
     for(var i=0;i<inv.length;i++){
         if(inv[i].id!="grid_1_1"){
             inv[i].style.display = "none";
@@ -55,8 +55,6 @@ function checkValidity(newRow, newCol){//moves the image to crop something else
 
     console.log(col1);
     console.log(row1);
-
-    
     
     //show the pic
     document.getElementById("gameView").style.backgroundPositionX = (50*col1).toString()+"%";
@@ -102,14 +100,6 @@ function getLoadedDiv(column, row){
     }
 }
 
-function passdata(idNeeded){
-    alert("something appears");
-}
-
-function minigameTimer(){
-
-}
-
 function minigame(){
 
     let trashCan = document.getElementById("addJunkHere");
@@ -117,7 +107,7 @@ function minigame(){
 
    
 
-    for(var i=0; i<300; i++){
+    for(var i=0; i<100; i++){
         var trash1 = document.createElement("div");
         var trash1_p = document.createElement("p");
     
