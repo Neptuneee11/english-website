@@ -12,51 +12,69 @@
 </head>
 
 <body onload="doFirst()">
-    <div class="controls">
-        <button onclick="left()"> left </button>
-        <button onclick="right()"> right </button>
-        <button onclick="up()"> up </button>
-        <button onclick="down()"> down </button>
-        <button data-bs-toggle="modal" data-bs-target="#minigameModal" onclick="minigame()"> minigame </button>
-    </div>
+
     <div class="playerPanel">
         <h1> prison map: navigate with the buttons </h1>
-
-        <div class="gameView" id="gameView">
-            <div class="invis" id="grid_1_1">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#popUpModal" onclick="passData('minigame')">
-                    <div class="interactable" id="minigame">
-                        <p> test </p>
-                    </div>
-                </a>
-            </div>
-            <div class="invis" id="grid_0_0">
-                
-            </div>
-            <div class="invis" id="grid_0_1">
-                
-            </div>
-            <div class="invis" id="grid_0_2">
-                
-            </div>
-            <div class="invis" id="grid_1_0">
-                
-            </div>
-
-            <div class="invis" id="grid_1_2">
-                
-            </div>
-            <div class="invis" id="grid_2_0">
-                
-            </div>
-            <div class="invis" id="grid_2_1">
-                
-            </div>
-            <div class="invis" id="grid_2_2">
-                
-            </div>
+        <div class="controlPanel">
+            <table align="center">
+                <tr>
+                    <td>  </td>
+                    <td>
+                        <button id="up" onclick="up()"> up </button>
+                    </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="left" onclick="left()"> left </button>
+                    </td>
+                    <td>
+                        <div class="gameView" id="gameView">
+                            <div class="invis" id="grid_1_1">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#popUpModal" onclick="passData('minigame')">
+                                    <div class="interactable" id="minigame">
+                                        <p> test </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="invis" id="grid_0_0">
+                                
+                            </div>
+                            <div class="invis" id="grid_0_1">
+                                
+                            </div>
+                            <div class="invis" id="grid_0_2">
+                                
+                            </div>
+                            <div class="invis" id="grid_1_0">
+                                
+                            </div>
+            
+                            <div class="invis" id="grid_1_2">
+                                
+                            </div>
+                            <div class="invis" id="grid_2_0">
+                                
+                            </div>
+                            <div class="invis" id="grid_2_1">
+                                
+                            </div>
+                            <div class="invis" id="grid_2_2">
+                                
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <button id="right" onclick="right()"> right </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>  </td>
+                    <td><button id="down" onclick="down()"> down </button></td>
+                    <td>  </td>
+                </tr>
+            </table>
         </div>
-        
     </div>
 
     <div class="modal fade" id="popUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
