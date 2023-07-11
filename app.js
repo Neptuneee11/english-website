@@ -1,6 +1,7 @@
 //minigame variables
 isComplete = false;
 hasFile = false;
+pipeDestroyed = false;
 valves = [false,false,false];
 
 var row1 = 1;
@@ -169,25 +170,29 @@ function minigameCheck(idPassed){// if you click a puzzle piece
         alert("Got a file. It can break a pipe.")
     }
 
-    if(hasFile==true){
-        if(idPassed==="valve_1"){
-            valves[0] = true;
-        }
-        else if(idPassed==="valve_2"){
-            valves[1] = true;
-        }
-        else if(idPassed==="valve_3"){
-            valves[2] = true;
-        }
-    }
-    else{
-        if(idPassed==="valve_1" ||idPassed==="valve_2" ||idPassed==="valve_3"  ){
-            alert
+    if(idPassed==="pipe"){
+        if(hasFile==true){
+            alert("pipe broken");
         }
     }
 
+    if(idPassed==="valve_1"){
+        valves[0] = true;
+        alert("turned valve 1/3");
+    }
+    else if(idPassed==="valve_2"){
+        valves[1] = true;
+        alert("turned valve 2/3");
+    }
+    else if(idPassed==="valve_3"){
+        valves[2] = true;
+        alert("turned valve 3/3");
+    }
+
+
+
     //check for map transition
-    if(!valves.includes(false)){
+    if(!valves.includes(false) && pipeDestroyed==true){
 
         isComplete = true;
 
