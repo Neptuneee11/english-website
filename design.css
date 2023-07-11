@@ -72,6 +72,15 @@ div.invis{
 
 }
 
+div.invis_after{
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    /*background-color: blue;*/
+
+}
+
 div.interactable{
     border-radius: 50%;
     background-color: blue;

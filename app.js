@@ -1,3 +1,8 @@
+//minigame variables
+isComplete = false;
+hasFile = false;
+valves = [false,false,false];
+
 var row1 = 1;
 var col1 = 1;
 $(document).ready(function(){
@@ -128,4 +133,39 @@ function minigame(){
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
+}
+
+function objectClicked(idPassed){
+    //check if it's a puzzle piece or an information piece
+    
+}
+
+function minigameCheck(idPassed){
+    //check for conditions
+    if(idPassed==="file"){
+        hasFile=true;
+    }
+
+    if(hasFile==true){
+        if(idPassed==="valve_1"){
+            valves[0] = true;
+        }
+        else if(idPassed==="valve_2"){
+            valves[0] = true;
+        }
+        else if(idPassed==="valve_3"){
+            valves[0] = true;
+        }
+    }
+
+    //check for map transition
+    if(!valves.includes(false)){
+
+        isComplete = true;
+
+        //change map picture
+        document.getElementById("gameView").style.backgroundImage = "";
+
+        
+    }
+}
