@@ -12,10 +12,19 @@ $(document).ready(function(){
     $("#minigameModal").on('hide.bs.modal', function(){
         $("#addJunkHere").empty()
     });
+    $("#popUpModal").on('hide.bs.modal', function(){
+        $("#addInfoHere").empty()
+    });
   });
 
 function doFirst(){
     let inv=document.getElementsByClassName("invis");
+
+    //reset variables
+    //minigame variables
+    isComplete = false;
+    hasFile = false;
+    valves = [false,false,false];
 
     //set them all to display: none except for the center
     for(var i=0;i<inv.length;i++){
@@ -135,15 +144,29 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-function objectClicked(idPassed){
-    //check if it's a puzzle piece or an information piece
+function objectClicked(idPassed){//if you click an information piece
     
+    let choices = document.getElementById(idPassed).children;
+
+    let choice = null;
+
+    //check if complete
+    if(isComplete==true){
+        choice = choices[1];
+    }
+    else{
+        choice = choices[0];
+    }
+
+    passToModal(choice);
+
 }
 
-function minigameCheck(idPassed){
+function minigameCheck(idPassed){// if you click a puzzle piece
     //check for conditions
     if(idPassed==="file"){
         hasFile=true;
+        alert("Got a file. It can break a pipe.")
     }
 
     if(hasFile==true){
@@ -151,10 +174,15 @@ function minigameCheck(idPassed){
             valves[0] = true;
         }
         else if(idPassed==="valve_2"){
-            valves[0] = true;
+            valves[1] = true;
         }
         else if(idPassed==="valve_3"){
-            valves[0] = true;
+            valves[2] = true;
+        }
+    }
+    else{
+        if(idPassed==="valve_1" ||idPassed==="valve_2" ||idPassed==="valve_3"  ){
+            alert
         }
     }
 
@@ -168,4 +196,12 @@ function minigameCheck(idPassed){
 
         
     }
+}
+
+function passToModal(passed){
+    let htmlStr = passed.innerHTML;
+    document.getElementById("addInfoHere").innerHTML += htmlStr;
+
+    let leStyle = passed.getAttribute("style");
+    document.getElementById("addInfoHere").setAttribute("style", leStyle);
 }
