@@ -59,6 +59,7 @@ function down(){
 }
 
 function checkValidity(newRow, newCol){//moves the image to crop something else
+    //check if the next room os accessible
     //unload the current one
     let toUnload = getLoadedDiv(col1, row1);
     toUnload.style.display = "none";
