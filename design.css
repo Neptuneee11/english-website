@@ -65,19 +65,19 @@ div.gameView{
 
 div.invis{
     position: absolute;
-    opacity: 0.5;
+    opacity: 1;
     width: 100%;
     height: 100%;
-    /*background-color: blue;*/
+    background-color:none;
 
 }
 
 div.invis_after{
     position: absolute;
-    opacity: 0.5;
+    opacity: 1;
     width: 100%;
     height: 100%;
-    /*background-color: blue;*/
+    background-color:none;
 
 }
 
@@ -267,5 +267,10 @@ div.complete_entry{
 }
 
 div.complete_entry > p{
-    color: antiquewhite;
+    color: rgb(252, 247, 241);
+}
+
+img{
+    width:100%;
+    height:100%;
 }
