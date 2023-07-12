@@ -4,6 +4,12 @@ hasFile = false;
 pipeDestroyed = false;
 valves = [false,false,false];
 
+//accesibility of each room (up,left,down,right)
+accessibility = [[[false,false,true,false],[false,false,true,true],[false,true,false,false]],
+                 [[true,false,true,true],[true,true,true,true],[false,true,true,false]],
+                 [[true,false,false,false],[true,false,false,false],[true,true,false,false]]
+]
+
 var row1 = 1;
 var col1 = 1;
 $(document).ready(function(){
@@ -40,26 +46,34 @@ function doFirst(){
 
 function left(){
     console.log("left");
-    checkValidity(row1, col1-1);
+    if(accessibility[row1][col1][1]==true){
+        checkValidity(row1, col1-1);
+    }
 }
 
 function right(){
     console.log("right");
-    checkValidity(row1, col1+1);
+    if(accessibility[row1][col1][3]==true){
+        checkValidity(row1, col1+1);
+    }
 }
 
 function up(){
     console.log("up");
-    checkValidity(row1-1, col1);
+    if(accessibility[row1][col1][0]==true){
+        checkValidity(row1-1, col1);
+    }
 }
 
 function down(){
     console.log("down");
-    checkValidity(row1+1, col1);
+    if(accessibility[row1][col1][2]==true){
+        checkValidity(row1+1, col1);
+    }
 }
 
 function checkValidity(newRow, newCol){//moves the image to crop something else
-    //check if the next room os accessible
+    //check if the next room is accessible
     //unload the current one
     let toUnload = getLoadedDiv(col1, row1);
     toUnload.style.display = "none";
