@@ -55,7 +55,7 @@ div.gameView{
     left: 50%;
     transform: translate(-50%,0);
 
-    background-image: url("theMap.png") ;
+    background-image: url("theMap_before.png") ;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 300%;
@@ -65,19 +65,19 @@ div.gameView{
 
 div.invis{
     position: absolute;
-    opacity: 0.5;
+    opacity: 1;
     width: 100%;
     height: 100%;
-    /*background-color: blue;*/
+    background-color:none;
 
 }
 
 div.invis_after{
     position: absolute;
-    opacity: 0.5;
+    opacity: 1;
     width: 100%;
     height: 100%;
-    /*background-color: blue;*/
+    background-color:none;
 
 }
 
@@ -85,10 +85,11 @@ div.invis_after{
 
 div.interactable{
     position: absolute;
-    background-color: rgb(0, 204, 255);
+    background-color: rgba(255, 217, 0, 0);
 
 }
 
+/* minigame assets */
 div#file{
     background-color: rgb(55, 23, 129);
     width: 30px;
@@ -129,6 +130,64 @@ div#pipe{
     top:15%;
 }
 
+/* specific entries */
+
+div#interactable_0_0{ /* what object is this */
+    width: 30px;
+    height: 30px;
+    right: 30%;
+    top:15%;
+}
+
+div#interactable_0_1{ /* what object is this */
+    width: 100px;
+    height: 100px;
+    right: 40%;
+}
+
+div#interactable_0_2{ /* what object is this */
+    width: 30px;
+    height: 30px;
+    right: 30%;
+    top:15%;
+}
+
+div#interactable_1_0{ /* what object is this */
+    width: 30px;
+    height: 30px;
+    right: 30%;
+    top:15%;
+}
+
+div#interactable_1_2{ /* what object is this */
+    width: 30px;
+    height: 30px;
+    right: 30%;
+    top:23%;
+}
+
+div#interactable_2_0{ /* what object is this */
+    width: 30px;
+    height: 30px;
+    right: 30%;
+    top:15%;
+}
+
+div#interactable_2_1{ /* what object is this */
+    width: 30px;
+    height: 30px;
+    right: 30%;
+    top:15%;
+}
+
+div#interactable_2_2{ /* what object is this */
+    width: 30px;
+    height: 30px;
+    right: 30%;
+    top:15%;
+}
+
+
 
 
 div#minigame{
@@ -145,6 +204,21 @@ div.random_1{
 div.random_2{
     background-color: rgb(96, 210, 30);
     padding: 25px;
+}
+
+div.random_2{
+    background-color: rgb(210, 111, 30);
+    padding: 15px;
+}
+
+div.random_2{
+    background-color: rgb(117, 214, 231);
+    padding: 5px;
+}
+
+div.random_2{
+    background-color: rgb(248, 68, 248);
+    padding: 30px;
 }
 
 h1{
@@ -185,4 +259,17 @@ div.inc_entry, div.complete_entry{
 
 div.inc_entry{
     background-color: #f9cb9c;
+}
+
+div.complete_entry{
+    background-color: #0b5394;
+}
+
+div.complete_entry > p{
+    color: rgb(252, 247, 241);
+}
+
+img{
+    width:100%;
+    height:100%;
 }
