@@ -116,32 +116,33 @@ function getLoadedDiv(column, row){
 }
 
 function minigame(){
-
-    let trashCan = document.getElementById("addJunkHere");
-    var choose = ["random_1","random_2","random_3","random_4","random_5"];
-    var thumbnailRandom = ["See this!","Breaking news","suggested","we felt that you might be interested"];
-    var imgSources = ["headline1.png","headline2.png","headline3.png","headline4.png","headline5.png"];
-
-    for(var i=0; i<100; i++){
-        var trash1 = document.createElement("div");
-        var trash1_p = document.createElement("p");
+    if(isComplete==false){
+        let trashCan = document.getElementById("addJunkHere");
+        var choose = ["random_1","random_2","random_3","random_4","random_5"];
+        var thumbnailRandom = ["See this!","Breaking news","suggested","we felt that you might be interested"];
+        var imgSources = ["headline1.png","headline2.png","headline3.png","headline4.png","headline5.png"];
     
-        var text1 = document.createTextNode(thumbnailRandom[getRandomInt(thumbnailRandom.length)]);
-        var img1 = document.createElement('img');
-        img1.src = imgSources[getRandomInt(imgSources.length)];
-        trash1.appendChild(img1);
-        trash1_p.appendChild(text1);
-        trash1.appendChild(trash1_p);
+        for(var i=0; i<100; i++){
+            var trash1 = document.createElement("div");
+            var trash1_p = document.createElement("p");
         
-        trash1.setAttribute("class",choose[getRandomInt(choose.length)]);
-        trashCan.appendChild(trash1);
+            var text1 = document.createTextNode(thumbnailRandom[getRandomInt(thumbnailRandom.length)]);
+            var img1 = document.createElement('img');
+            img1.src = imgSources[getRandomInt(imgSources.length)];
+            trash1.appendChild(img1);
+            trash1_p.appendChild(text1);
+            trash1.appendChild(trash1_p);
+            
+            trash1.setAttribute("class",choose[getRandomInt(choose.length)]);
+            trashCan.appendChild(trash1);
+        }
+        //add the button that closes it
+        var esc = document.createElement("button");
+        esc.setAttribute("data-bs-dismiss","modal");
+        esc.innerHTML = "press to exit";
+        
+        trashCan.appendChild(esc);
     }
-    //add the button that closes it
-    var esc = document.createElement("button");
-    esc.setAttribute("data-bs-dismiss","modal");
-    esc.innerHTML = "press to exit";
-    
-    trashCan.appendChild(esc);
 }
 
 function getRandomInt(max) {

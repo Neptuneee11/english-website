@@ -267,7 +267,7 @@ div.complete_entry{
     background-color: #0b5394;
 }
 
-div.complete_entry > p{
+div.complete_entry > *{
     color: rgb(252, 247, 241);
 }
 
