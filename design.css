@@ -100,7 +100,7 @@ div#file{
 }
 
 div#valve_1{
-    background-color: rgb(55, 23, 129);
+    background-color: rgba(55, 23, 129, 0);
     width: 30px;
     height: 30px;
     left: 10%;
@@ -108,7 +108,7 @@ div#valve_1{
 }
 
 div#valve_2{
-    background-color: rgb(55, 23, 129);
+    background-color: rgba(55, 23, 129, 0);
     width: 30px;
     height: 30px;
     right: 10%;
@@ -116,7 +116,7 @@ div#valve_2{
 }
 
 div#valve_3{
-    background-color: rgb(55, 23, 129);
+    background-color: rgba(55, 23, 129, 0);
     width: 30px;
     height: 30px;
     left: 10%;
@@ -124,11 +124,11 @@ div#valve_3{
 }
 
 div#pipe{
-    background-color: rgb(55, 23, 129);
+    background-color: rgba(55, 23, 129, 0);
     width: 30px;
-    height: 30px;
-    right: 30%;
-    top:15%;
+    height: 70px;
+    right: 0%;
+    top:0%;
 }
 
 /* specific entries */
