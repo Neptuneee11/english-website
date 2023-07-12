@@ -136,8 +136,8 @@ div#pipe{
 div#interactable_0_0{ /* what object is this */
     width: 30px;
     height: 30px;
-    right: 30%;
-    top:15%;
+    right: 20%;
+    bottom:0%;
 }
 
 div#interactable_0_1{ /* what object is this */
@@ -155,10 +155,10 @@ div#interactable_0_2{ /* what object is this */
 }
 
 div#interactable_1_0{ /* what object is this */
-    width: 30px;
-    height: 30px;
-    right: 30%;
-    top:15%;
+    width: 60px;
+    height: 60px;
+    right: -2%;
+    top:5%;
 }
 
 div#interactable_1_2{ /* what object is this */
@@ -171,8 +171,8 @@ div#interactable_1_2{ /* what object is this */
 div#interactable_2_0{ /* what object is this */
     width: 30px;
     height: 30px;
-    right: 30%;
-    top:15%;
+    left: 15%;
+    top:50%;
 }
 
 div#interactable_2_1{ /* what object is this */
@@ -186,7 +186,7 @@ div#interactable_2_2{ /* what object is this */
     width: 30px;
     height: 30px;
     right: 30%;
-    top:15%;
+    bottom:15%;
 }
 
 
