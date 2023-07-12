@@ -89,13 +89,14 @@ div.interactable{
 
 }
 
+
 /* minigame assets */
 div#file{
-    background-color: rgb(55, 23, 129);
+    background-color: rgba(55, 23, 129, 0);
     width: 30px;
     height: 30px;
     left: 10%;
-    bottom:5%;
+    bottom:15%;
 }
 
 div#valve_1{
@@ -146,10 +147,11 @@ div#interactable_0_1{ /* what object is this */
 }
 
 div#interactable_0_2{ /* what object is this */
-    width: 30px;
-    height: 30px;
-    right: 30%;
-    top:15%;
+    width: 100px;
+    height: 100px;
+    right: 40%;
+    top: 50%;
+    transform: translate(0,-50%);
 }
 
 div#interactable_1_0{ /* what object is this */
