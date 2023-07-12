@@ -11,24 +11,26 @@
 
 </head>
 
-<body onload="doFirst()">
+<body onload="doFirst()" style="font-family: 'Courier New', Courier, monospace; background-color: black;">
 
     <div class="playerPanel">
-        <h1> prison map: navigate with the buttons </h1>
-        <div class="controlPanel">
+        <div style="text-align: center;">
+            <h1 style="color: lime;"> prison map: navigate with the buttons </h1>
+        </div>
+        <div class="controlPanel" style="background-color: black;">
             <table align="center">
                 <tr>
-                    <td>  </td>
-                    <td>
-                        <button id="up" onclick="up()"> ▲ </button>
+                    <td style="background-color: black;">  </td>
+                    <td style="background-color: white;">
+                        <button id="up" onclick="up()" style="border: 0; border-radius: 5px; padding-top: 10px; padding-bottom: 10px; background-color: orangered; color: white;"> ▲  UP  ▲ </button>
                     </td>
-                    <td> </td>
+                    <td style="background-color: black;"> </td>
                 </tr>
                 <tr>
-                    <td>
-                        <button id="left" onclick="left()"> ⯇ </button>
+                    <td style="background-color: white;">
+                        <button id="left" onclick="left()" style="border: 0; border-radius: 5px; background-color: orangered; color: white;"> ⯇ <br><br> LEFT <br><br> ⯇ </button>
                     </td>
-                    <td>
+                    <td style="background-color: white;">
                         <div class="gameView" id="gameView">
                             <div class="invis" id="grid_1_1">
                                 
@@ -71,14 +73,15 @@
                             </div>
                         </div>
                     </td>
-                    <td>
-                        <button id="right" onclick="right()"> ⯈ </button>
+                    <td style="background-color: white;">
+                        <button id="right" onclick="right()" style="border: 0; border-radius: 5px;  background-color: orangered; color: white;"> ⯈ <br><br> RIGHT <br><br> ⯈ </button>
+                    </td>
                     </td>
                 </tr>
                 <tr>
-                    <td>  </td>
-                    <td><button id="down" onclick="down()"> ▼ </button></td>
-                    <td>  </td>
+                    <td style="background-color: black;">  </td>
+                    <td style="background-color: white;"><button id="down" onclick="down()" style="border: 0; border-radius: 5px; padding-top: 10px; padding-bottom: 10px;  background-color: orangered; color: white;"> ▼  DOWN  ▼ </button></td>
+                    <td style="background-color: black;">  </td>
                 </tr>
             </table>
         </div>
