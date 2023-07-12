@@ -81,11 +81,55 @@ div.invis_after{
 
 }
 
+/*interactables===========================*/
+
 div.interactable{
-    border-radius: 50%;
-    background-color: blue;
+    position: absolute;
+    background-color: rgb(0, 204, 255);
 
 }
+
+div#file{
+    background-color: rgb(55, 23, 129);
+    width: 30px;
+    height: 30px;
+    left: 10%;
+    bottom:5%;
+}
+
+div#valve_1{
+    background-color: rgb(55, 23, 129);
+    width: 30px;
+    height: 30px;
+    left: 10%;
+    bottom:5%;
+}
+
+div#valve_2{
+    background-color: rgb(55, 23, 129);
+    width: 30px;
+    height: 30px;
+    right: 10%;
+    top:5%;
+}
+
+div#valve_3{
+    background-color: rgb(55, 23, 129);
+    width: 30px;
+    height: 30px;
+    left: 10%;
+    top:5%;
+}
+
+div#pipe{
+    background-color: rgb(55, 23, 129);
+    width: 30px;
+    height: 30px;
+    right: 30%;
+    top:15%;
+}
+
+
 
 div#minigame{
     position:absolute;

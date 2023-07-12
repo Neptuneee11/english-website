@@ -173,6 +173,10 @@ function minigameCheck(idPassed){// if you click a puzzle piece
     if(idPassed==="pipe"){
         if(hasFile==true){
             alert("pipe broken");
+            pipeDestroyed = true;
+        }
+        else{
+            alert("It's a water pipe. A leak could reveal a lot more information");
         }
     }
 
@@ -190,17 +194,22 @@ function minigameCheck(idPassed){// if you click a puzzle piece
     }
 
 
-
     //check for map transition
     if(!valves.includes(false) && pipeDestroyed==true){
+
+        alert("a leak has been detected. system failure imminent");
 
         isComplete = true;
 
         //change map picture
-        document.getElementById("gameView").style.backgroundImage = "";
+        document.getElementById("gameView").style.backgroundImage = 'url("")';
 
         
     }
+
+    console.log(hasFile);
+    console.log(pipeDestroyed);
+    console.log(valves);
 }
 
 function passToModal(passed){
