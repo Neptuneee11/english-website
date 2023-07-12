@@ -55,7 +55,7 @@ div.gameView{
     left: 50%;
     transform: translate(-50%,0);
 
-    background-image: url("theMap.png") ;
+    background-image: url("theMap_before.png") ;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 300%;
