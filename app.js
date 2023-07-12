@@ -120,6 +120,7 @@ function minigame(){
     let trashCan = document.getElementById("addJunkHere");
     var choose = ["random_1","random_2","random_3","random_4","random_5",];
     var thumbnailRandom = ["See this!","Breaking news","suggested","we felt that you might be interested"];
+    var imgSources = ["headline1.png","headline2.png","headline3.png","headline4.png","headline5.png"];
 
    
 
@@ -128,6 +129,8 @@ function minigame(){
         var trash1_p = document.createElement("p");
     
         var text1 = document.createTextNode(thumbnailRandom[getRandomInt(thumbnailRandom)]);
+        var img1 = document.createElement('img');
+        img1.src = imgSources[getRandomInt(imgSources.length)];
         trash1_p.appendChild(text1);
         trash1.appendChild(trash1_p);
         
