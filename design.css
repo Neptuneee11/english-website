@@ -85,7 +85,7 @@ div.invis_after{
 
 div.interactable{
     position: absolute;
-    background-color: rgb(255, 217, 0);
+    background-color: rgba(255, 217, 0, 0);
 
 }
 
@@ -140,10 +140,9 @@ div#interactable_0_0{ /* what object is this */
 }
 
 div#interactable_0_1{ /* what object is this */
-    width: 30px;
-    height: 30px;
-    right: 30%;
-    top:15%;
+    width: 100px;
+    height: 100px;
+    right: 40%;
 }
 
 div#interactable_0_2{ /* what object is this */
@@ -164,7 +163,7 @@ div#interactable_1_2{ /* what object is this */
     width: 30px;
     height: 30px;
     right: 30%;
-    top:15%;
+    top:23%;
 }
 
 div#interactable_2_0{ /* what object is this */
