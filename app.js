@@ -173,12 +173,14 @@ function minigameCheck(idPassed){// if you click a puzzle piece
     if(idPassed==="file"){
         hasFile=true;
         alert("Got a file. It can break a pipe.")
+        document.getElementById("file").style.display = "none";
     }
 
     if(idPassed==="pipe"){
         if(hasFile==true){
             alert("pipe broken");
             pipeDestroyed = true;
+            document.getElementById("pipe").style.display = "none";
         }
         else{
             alert("It's a water pipe. A leak could reveal a lot more information");

@@ -141,17 +141,17 @@ div#interactable_0_0{ /* what object is this */
 }
 
 div#interactable_0_1{ /* what object is this */
-    width: 100px;
-    height: 100px;
-    right: 40%;
+    width: 110px;
+    height: 110px;
+    right: 39%;
+    top: -3%;
 }
 
 div#interactable_0_2{ /* what object is this */
-    width: 100px;
-    height: 100px;
-    right: 40%;
-    top: 50%;
-    transform: translate(0,-50%);
+    width: 110px;
+    height: 110px;
+    right: 39%;
+    top: 41%;
 }
 
 div#interactable_1_0{ /* what object is this */
