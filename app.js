@@ -118,7 +118,8 @@ function getLoadedDiv(column, row){
 function minigame(){
 
     let trashCan = document.getElementById("addJunkHere");
-    var choose = ["random_1","random_2"];
+    var choose = ["random_1","random_2","random_3","random_4","random_5",];
+    var thumbnailRandom = ["See this!","Breaking news","suggested","we felt that you might be interested"];
 
    
 
@@ -126,11 +127,11 @@ function minigame(){
         var trash1 = document.createElement("div");
         var trash1_p = document.createElement("p");
     
-        var text1 = document.createTextNode("lorem ipsum");
+        var text1 = document.createTextNode(thumbnailRandom[getRandomInt(thumbnailRandom)]);
         trash1_p.appendChild(text1);
         trash1.appendChild(trash1_p);
         
-        trash1.setAttribute("class",choose[getRandomInt(2)]);
+        trash1.setAttribute("class",choose[getRandomInt(choose.length)]);
         trashCan.appendChild(trash1);
     }
     //add the button that closes it
