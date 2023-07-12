@@ -261,3 +261,11 @@ div.inc_entry, div.complete_entry{
 div.inc_entry{
     background-color: #f9cb9c;
 }
+
+div.complete_entry{
+    background-color: #0b5394;
+}
+
+div.complete_entry > p{
+    color: antiquewhite;
+}

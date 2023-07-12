@@ -206,7 +206,7 @@ function minigameCheck(idPassed){// if you click a puzzle piece
         isComplete = true;
 
         //change map picture
-        document.getElementById("gameView").style.backgroundImage = 'url("")';
+        document.getElementById("gameView").style.backgroundImage = 'url("theMap_after.png")';
 
         
     }
