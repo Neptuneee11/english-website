@@ -31,20 +31,24 @@
                     <td>
                         <div class="gameView" id="gameView">
                             <div class="invis" id="grid_1_1">
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#popUpModal" onclick="passData('minigame')">
-                                    <div class="interactable" id="minigame">
-                                        <p> test </p>
-                                    </div>
-                                </a>
+                                
                             </div>
                             <div class="invis" id="grid_0_0">
-                                
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#popUpModal" onclick="passData('choice_1')">
+                                    <div class="interactable" id="interactable_0_0">
+                                        <p> test infoPiece</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="invis" id="grid_0_1">
                                 
                             </div>
                             <div class="invis" id="grid_0_2">
-                                
+                                <a href="#" onclick="minigameCheck('file')">
+                                    <div class="interactable" id="file">
+                                        <p> test puzzlePiece</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="invis" id="grid_1_0">
                                 
@@ -75,12 +79,20 @@
                 </tr>
             </table>
         </div>
+        <div class="entryPane" style="display:none;"><!--put the entry divs here-->
+            <div class="choice" id="choice_1" name="infoPiece"><!--I'll make the js choose between the 2, make the clickables point to the ID-->
+                <div class="inc_entry" id="entry_inc_1">
+                </div>
+                <div class="complete_entry" id="entry_complete_1">
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="modal fade" id="popUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <p> info about prisons </p>
+            <div class="modal-content" id="addInfoHere">
+                
             </div>
         </div>
     </div>

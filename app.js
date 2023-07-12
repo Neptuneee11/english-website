@@ -1,3 +1,9 @@
+//minigame variables
+isComplete = false;
+hasFile = false;
+pipeDestroyed = false;
+valves = [false,false,false];
+
 var row1 = 1;
 var col1 = 1;
 $(document).ready(function(){
@@ -7,10 +13,19 @@ $(document).ready(function(){
     $("#minigameModal").on('hide.bs.modal', function(){
         $("#addJunkHere").empty()
     });
+    $("#popUpModal").on('hide.bs.modal', function(){
+        $("#addInfoHere").empty()
+    });
   });
 
 function doFirst(){
     let inv=document.getElementsByClassName("invis");
+
+    //reset variables
+    //minigame variables
+    isComplete = false;
+    hasFile = false;
+    valves = [false,false,false];
 
     //set them all to display: none except for the center
     for(var i=0;i<inv.length;i++){
@@ -128,4 +143,70 @@ function minigame(){
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
-  }
+}
+
+function objectClicked(idPassed){//if you click an information piece
+    
+    let choices = document.getElementById(idPassed).children;
+
+    let choice = null;
+
+    //check if complete
+    if(isComplete==true){
+        choice = choices[1];
+    }
+    else{
+        choice = choices[0];
+    }
+
+    passToModal(choice);
+
+}
+
+function minigameCheck(idPassed){// if you click a puzzle piece
+    //check for conditions
+    if(idPassed==="file"){
+        hasFile=true;
+        alert("Got a file. It can break a pipe.")
+    }
+
+    if(idPassed==="pipe"){
+        if(hasFile==true){
+            alert("pipe broken");
+        }
+    }
+
+    if(idPassed==="valve_1"){
+        valves[0] = true;
+        alert("turned valve 1/3");
+    }
+    else if(idPassed==="valve_2"){
+        valves[1] = true;
+        alert("turned valve 2/3");
+    }
+    else if(idPassed==="valve_3"){
+        valves[2] = true;
+        alert("turned valve 3/3");
+    }
+
+
+
+    //check for map transition
+    if(!valves.includes(false) && pipeDestroyed==true){
+
+        isComplete = true;
+
+        //change map picture
+        document.getElementById("gameView").style.backgroundImage = "";
+
+        
+    }
+}
+
+function passToModal(passed){
+    let htmlStr = passed.innerHTML;
+    document.getElementById("addInfoHere").innerHTML += htmlStr;
+
+    let leStyle = passed.getAttribute("style");
+    document.getElementById("addInfoHere").setAttribute("style", leStyle);
+}
