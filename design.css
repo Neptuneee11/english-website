@@ -115,4 +115,30 @@ h1{
 #addJunkHere {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-    }
+}
+
+/* for deleted text */
+
+del span{
+    
+  display: inline-block;
+  background-color: black;
+  color: transparent;
+  transform: rotate(.5deg), skewx(-8deg);
+  padding: 0 1em;
+  margin: 0 -.5em;
+  user-select: none;
+  cursor: default;
+  border-radius: 2px;
+  
+}
+
+/* for the entries*/
+
+div.inc_entry, div.complete_entry{
+    padding: 15px;
+}
+
+div.inc_entry{
+    background-color: #f9cb9c;
+}

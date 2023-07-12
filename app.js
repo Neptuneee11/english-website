@@ -204,9 +204,13 @@ function minigameCheck(idPassed){// if you click a puzzle piece
 }
 
 function passToModal(passed){
-    let htmlStr = passed.innerHTML;
-    document.getElementById("addInfoHere").innerHTML += htmlStr;
+    console.log(passed);
+
+    var added = passed.cloneNode(true);
+
+    document.getElementById("addInfoHere").appendChild(added);
 
     let leStyle = passed.getAttribute("style");
+    console.log(leStyle);
     document.getElementById("addInfoHere").setAttribute("style", leStyle);
 }
